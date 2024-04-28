@@ -129,7 +129,7 @@ const CreateEvent = () => {
                             className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm"
                         />
                     </div>
-                    <button type="submit" className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"  disabled={loading} >
+                    <button type="submit" className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"  disabled={loading} >
                         {loading ? <Loader /> : ' Create Event'} 
                     </button>
                 </form>

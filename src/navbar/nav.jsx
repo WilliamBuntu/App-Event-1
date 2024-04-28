@@ -15,10 +15,10 @@ const NavBar = () => {
 
   return (
     <nav className="flex items-center justify-between gradient p-4 z-40">
-      <div className="flex items-center space-x-9">
+      <div className="flex items-center  space-x-9">
         <div className="flex items-center space-x-3">
           <div className="flex">
-            <h3 className="text-white xl:text-xl hidden xl:block">E-Vent</h3>
+            <h3 className="text-white xl:text-xl hidden xl:block">Platfom Events</h3>
           </div>
         </div>
       </div>

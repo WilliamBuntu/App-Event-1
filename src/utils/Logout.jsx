@@ -13,7 +13,7 @@ const LogoutButton = () => {
   return (
    <div>
      <h3
-        className="text-white cursor-pointer border border-green-900 px-2 py-2 rounded-lg"
+        className="text-white cursor-pointer hover:bg-green-900 border border-green-900 px-2 py-2 rounded-lg"
         onClick={handleLogout}
     >
         <FontAwesomeIcon

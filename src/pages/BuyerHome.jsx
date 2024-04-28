@@ -76,7 +76,7 @@ const BuyerHome = () => {
     <div>
       <NavBar />
       <div className="container mx-auto py-8 px-4">
-        <h2 className="text-2xl font-semibold mb-2">Upcoming Events</h2>
+        <h2 className="text-2xl font-semibold mb-2"> Events</h2>
         {loading ? (
           <Loader />
         ) : eventsData.length > 0 ? (
@@ -99,7 +99,7 @@ const BuyerHome = () => {
                   <td className="px-6 py-4">{event.ticketAvailability}</td>
                   <td className="px-6 py-4">
                     <div className='flex gap-2'>
-                      <button className="text-white cursor-pointer border border-green-800 px-2 py-2 rounded-lg bg-green-800 w-20" onClick={() => handleBookEvent(event.id)}>
+                      <button className="text-white cursor-pointer border border-green-600 px-2 py-2 rounded-lg bg-green-600 w-20" onClick={() => handleBookEvent(event.id)}>
                         {Booking[event.id] ? (
                           <Loader /> 
                         ) : (
