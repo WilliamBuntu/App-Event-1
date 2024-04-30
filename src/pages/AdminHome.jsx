@@ -9,6 +9,7 @@ import { formatDate } from '../utils/formatDate';
 import { Link } from 'react-router-dom';
 import NavBar from '../navbar/nav';
 import Loader from '../utils/Loader';
+import BuyerHome from './BuyerHome';
 
 const AdminHome = () => {
   const [eventsData, setEventsData] = useState([]);
@@ -103,6 +104,7 @@ const AdminHome = () => {
   return (
     <div className="bg-gray-100 min-h-screen">
       <NavBar />
+      <BuyerHome/>
       <div className="container mx-auto py-8 px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {loading ? (
           <Loader />

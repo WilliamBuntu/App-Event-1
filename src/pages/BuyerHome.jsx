@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import API from '../utils/axios';
 import { formatDate } from '../utils/formatDate';
-import NavBar from '../navbar/nav';
+// import NavBar from '../navbar/nav';
 import Swal from 'sweetalert2';
 import { toast } from "react-toastify";
 import Loader from '../utils/Loader';
@@ -74,7 +74,7 @@ const BuyerHome = () => {
 
   return (
     <div>
-      <NavBar />
+      {/* <NavBar /> */}
       <div className="container mx-auto py-8 px-4">
         <h2 className="text-2xl font-semibold mb-2"> Events</h2>
         {loading ? (
