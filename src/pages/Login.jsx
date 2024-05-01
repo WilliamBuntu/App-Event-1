@@ -56,9 +56,9 @@ const LoginForm = () => {
   };  
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-purple-400 to-pink-500">
       <div className="max-w-md w-full p-6 bg-white rounded-md shadow-md">
-        <h2 className="text-center text-2xl mb-4">Login</h2>
+        <h2 className="text-center text-2xl mb-4 font-bold text-gray-800">Login</h2>
         {error && <p className="text-red-500 mb-4">{error}</p>}
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
@@ -68,7 +68,7 @@ const LoginForm = () => {
               type="email"
               value={email}
               onChange={handleEmailChange}
-              className="mt-1 p-2 block w-full border border-gray-300 rounded-md"
+              className="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500"
               required
             />
           </div>
@@ -79,13 +79,13 @@ const LoginForm = () => {
               type="password"
               value={password}
               onChange={handlePasswordChange}
-              className="mt-1 p-2 block w-full border border-gray-300 rounded-md"
+              className="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500"
               required
             />
           </div>
           <button
             type="submit"
-            className="w-full bg-green-500 text-white py-2 rounded-md hover:bg-green-600 transition duration-200"
+            className="w-full bg-green-500 text-white py-2 rounded-md hover:bg-green-600 transition duration-200 focus:outline-none focus:ring focus:border-blue-500"
             disabled={loading} 
           >
             {loading ? <Loader /> : 'Login'} 

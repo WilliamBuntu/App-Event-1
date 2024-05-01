@@ -73,53 +73,51 @@ const BuyerHome = () => {
   };
 
   return (
-    <div>
+    <div className="container mx-auto py-8 px-4">
       {/* <NavBar /> */}
-      <div className="container mx-auto py-8 px-4">
-        <h2 className="text-2xl font-semibold mb-2"> Events</h2>
-        {loading ? (
-          <Loader />
-        ) : eventsData.length > 0 ? (
-          <table className="w-full text-sm text-left text-gray-500">
-            <thead className="text-xs text-gray-700 uppercase bg-gray-50">
-              <tr>
-                <th className="px-6 py-3">Title</th>
-                <th className="px-6 py-3">Date</th>
-                <th className="px-6 py-3">Location</th>
-                <th className="px-6 py-3">Tickets Available</th>
-                <th className="px-6 py-3">Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              {eventsData.map((event, index) => (
-                <tr key={`event-${index}`}>
-                  <td className="px-6 py-4">{event.title}</td>
-                  <td className="px-6 py-4">{event.date}</td>
-                  <td className="px-6 py-4">{event.location}</td>
-                  <td className="px-6 py-4">{event.ticketAvailability}</td>
-                  <td className="px-6 py-4">
-                    <div className='flex gap-2'>
-                      <button className="text-white cursor-pointer border border-green-600 px-2 py-2 rounded-lg bg-green-600 w-20" onClick={() => handleBookEvent(event.id)}>
-                        {Booking[event.id] ? (
-                          <Loader /> 
-                        ) : (
-                          'Book' 
-                        )}
-                      </button>
-                    </div>
-
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        ) : (
-          <div className="flex justify-center items-center h-64">
-            <p className="text-xl text-gray-500">No Events</p>
-          </div>
-        )}
-      </div>
+ <h2 className="text-2xl font-semibold mb-2"> Events</h2>
+ {loading ? (
+    <Loader />
+ ) : eventsData.length > 0 ? (
+    <table className="w-full text-sm text-left text-gray-500">
+      <thead className="text-xs text-gray-700 uppercase bg-gray-50">
+        <tr>
+          <th className="px-6 py-3">Title</th>
+          <th className="px-6 py-3">Date</th>
+          <th className="px-6 py-3">Location</th>
+          <th className="px-6 py-3">Tickets Available</th>
+          <th className="px-6 py-3">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {eventsData.map((event, index) => (
+          <tr key={`event-${index}`} className="transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-95">
+            <td className="px-6 py-4">{event.title}</td>
+            <td className="px-6 py-4">{event.date}</td>
+            <td className="px-6 py-4">{event.location}</td>
+            <td className="px-6 py-4">{event.ticketAvailability}</td>
+            <td className="px-6 py-4">
+              <div className='flex gap-2'>
+                <button className="text-white cursor-pointer border border-green-600 px-2 py-2 rounded-lg bg-green-600 w-20 transition duration-200 ease-in-out transform hover:bg-green-700 hover:scale-105" onClick={() => handleBookEvent(event.id)}>
+                 {Booking[event.id] ? (
+                    <Loader /> 
+                 ) : (
+                    'Book' 
+                 )}
+                </button>
+              </div>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+ ) : (
+    <div className="flex justify-center items-center h-64">
+      <p className="text-xl text-gray-500">No Events</p>
     </div>
+ )}
+</div>
+
   );
 };
 
